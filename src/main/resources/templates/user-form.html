@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+    <!-- INCOMPLETE -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #dbeafe, #fce7f3, #e0f2fe);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            padding: 25px;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            transition: 0.3s ease;
+        }
+
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #222;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 11px;
+            border-radius: 10px;
+            border: 1px solid #ddd;
+            font-size: 14px;
+            background: rgba(255,255,255,0.9);
+            transition: all 0.25s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 8px rgba(99,102,241,0.4);
+            outline: none;
+            transform: scale(1.02);
+        }
+
+        .gender {
+            display: flex;
+            gap: 20px;
+            margin-top: 8px;
+            flex-wrap: wrap;
+        }
+
+        .gender label {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 20px;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #6366f1, #ec4899);
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* 📱 Mobile tweaks */
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            input, select {
+                padding: 10px;
+                font-size: 13px;
+            }
+
+            button {
+                font-size: 14px;
+                padding: 10px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 450px;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>User Details</h2>
+
+    <form action="/submit-user-details" method="post">
+
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" name="firstName" placeholder="Enter your first name..." required>
+        </div>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" name="lastName" placeholder="Enter your last name..." required>
+        </div>
+
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="userName" placeholder="Enter your username..." required>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter your valid email id..." required>
+        </div>
+
+        <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="tel" name="mobileNumber" placeholder="Enter your mobile number...">
+        </div>
+
+        <!--<div class="form-group">
+            <label>Gender</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+            </div>
+        </div>-->
+
+        <!--<div class="form-group">
+            <label>Country</label>
+            <select name="country">
+                <option value="">Select Country</option>
+                <option>India</option>
+                <option>USA</option>
+                <option>UK</option>
+            </select>
+        </div>-->
+
+        <!--<div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter password" required>
+        </div>-->
+
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+
+</body>
+</html>
