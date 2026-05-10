@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+    <html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <title>Printing Loops</title>
+    </head>
+    <body>
+        <h2> Hey there, Here we are traversing and printing loops using <span th:text="Thymeleaf" ></span> Framework! </h2>
+        <div>
+            <ul>
+                <li th:each="n : ${items}"> <!--th:each is used to print/traverse data in any Collection-->
+                    <span th:text="${n}"></span>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
