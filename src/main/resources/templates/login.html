@@ -77,16 +77,30 @@
         </div>
 
         <!-- Terms -->
-        <div class="form-check mb-3">
+        <!--<div class="form-check mb-3">
             <input class="form-check-input" type="checkbox" required>
             <label name="termsAndCondition" class="form-check-label">
                 I agree to the Terms & Conditions
             </label>
-        </div>
+        </div>-->
 
         <!-- Submit -->
         <button type="submit" class="btn btn-custom w-100">Login</button>
     </form>
+    <div class="text-center mt-4">
+        <span class="me-2">New User?</span>
+
+        <a th:href="@{/new-user}" class="btn btn-outline-primary btn-sm">
+            Register Here
+        </a>
+    </div>
+    <!--<div class="text-center mt-4">
+        <p class="mb-2 text-muted">Don't have an account?</p>
+
+        <a th:href="@{/new-user}" class="btn btn-outline-dark w-100">
+            Create New Account
+        </a>
+    </div>-->
 </div>
 
 </body>
