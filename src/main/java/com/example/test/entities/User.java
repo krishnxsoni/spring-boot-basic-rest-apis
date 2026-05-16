@@ -18,6 +18,8 @@ public class User {
     private String lastName;
     @Column(name = "username")
     private String userName;
+    @Column(name = "password")
+    protected String password;
     @Column(name = "email_id")
     private String emailId;
     @Column(name = "mobile_no")
@@ -55,6 +57,14 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public String getEmailId() {
