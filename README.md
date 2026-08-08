@@ -88,6 +88,34 @@ cURL examples:
     -H "Content-Type: application/json" \
     -d '{"name":"New Item"}'
 
+- Create student (example for this repo)
+
+  The application in this repository exposes a students endpoint on port 8010 in some sample setups. Below is a sample Postman request and an equivalent cURL command to create a student with required headers (auth-token and x-api-key).
+
+  Postman request:
+
+  ```text
+  POST 'http://localhost:8010/api/students/' \
+    --header 'auth-token: 12345' \
+    --header 'x-api-key: secret123' \
+    --header 'Content-Type: application/json' \
+    --body '{
+      "id" : 1,
+      "name" : "Rahul",
+      "email" : "rahul@gmail.com"
+  }'
+  ```
+
+  Equivalent cURL:
+
+  ```bash
+  curl -X POST 'http://localhost:8010/api/students/' \
+    -H 'auth-token: 12345' \
+    -H 'x-api-key: secret123' \
+    -H 'Content-Type: application/json' \
+    -d '{"id":1,"name":"Rahul","email":"rahul@gmail.com"}'
+  ```
+
 Adjust endpoints and payloads to reflect the actual controllers in the repository.
 
 ## Tests
@@ -119,4 +147,4 @@ Specify your license here (e.g., MIT, Apache-2.0). If unsure, add a LICENSE file
 
 ---
 
-If you want, I can update the README to include the actual endpoints and examples by scanning the repository — shall I do that now?
+If you want, I can scan the repo and update the README to include the actual endpoints and examples — shall I do that now?
