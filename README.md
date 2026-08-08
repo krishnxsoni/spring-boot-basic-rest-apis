@@ -59,35 +59,6 @@ or
 
 ## Example API endpoints
 
-Below are example endpoints you can adapt to what this repository actually implements. Replace with real paths when updating this README.
-
-- GET /api/health
-  - Response: 200 OK
-  - Body: { "status": "UP" }
-
-- GET /api/items
-  - Response: 200 OK
-  - Body: [ { "id": 1, "name": "Item A" }, ... ]
-
-- GET /api/items/{id}
-  - Response: 200 OK or 404 Not Found
-
-- POST /api/items
-  - Request Body: { "name": "Item A" }
-  - Response: 201 Created
-
-cURL examples:
-
-- Health check
-
-  curl -i http://localhost:8080/api/health
-
-- Create item
-
-  curl -X POST http://localhost:8080/api/items \
-    -H "Content-Type: application/json" \
-    -d '{"name":"New Item"}'
-
 - Create student (example for this repo)
 
   The application in this repository exposes a students endpoint on port 8010 in some sample setups. Below is a sample Postman request and an equivalent cURL command to create a student with required headers (auth-token and x-api-key).
@@ -118,33 +89,7 @@ cURL examples:
 
 Adjust endpoints and payloads to reflect the actual controllers in the repository.
 
-## Tests
-
-Run unit and integration tests with:
-
-  mvn test
-
-## Docker (optional)
-
-You can add a Dockerfile to containerize the app. A simple example:
-
-  FROM eclipse-temurin:17-jdk-jammy
-  COPY target/*.jar app.jar
-  ENTRYPOINT ["java","-jar","/app.jar"]
-
-Build and run:
-
-  docker build -t spring-boot-basic-rest-apis .
-  docker run -p 8080:8080 spring-boot-basic-rest-apis
 
 ## Contributing
 
 Contributions, issues, and feature requests are welcome. Please open an issue first for major changes and follow the repository's contribution guidelines if present.
-
-## License
-
-Specify your license here (e.g., MIT, Apache-2.0). If unsure, add a LICENSE file to the repository and reference it here.
-
----
-
-If you want, I can scan the repo and update the README to include the actual endpoints and examples — shall I do that now?
